@@ -15,7 +15,7 @@ def projects():
 
 @app.route('/calc')
 def calc():
-  return render_template("calculator.html")
+  return render_template("/school/calculator.html")
 
 @app.route('/whatsthis')
 def whatsthis():

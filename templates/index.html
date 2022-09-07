@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
         <title>Raadsel | Home!</title>
     </head>
 <noscript><h2>Javascript is disabled in your browser.</h2></noscript>
@@ -24,7 +24,7 @@
                     <button onclick=window.open("projects","_self") class='button'>Projects</button> |
                 </li>
                 <li class="inline-list">
-                    <button onclick=window.open("what_is_this") class='button'>What's this?</button> <!--I dunno,  I think you gotta see this for yourself! -->
+                    <button onclick=window.open("whatsthis") class='button'>What's this?</button> <!--I dunno,  I think you gotta see this for yourself! -->
                 </li>
             </ul>
         </div>
