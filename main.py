@@ -13,15 +13,24 @@ def about():
 def projects():
   return render_template("projects.html")
 
-@app.route('/calc')
-def calc():
-  return render_template("/school/calculator.html")
-
 @app.route('/whatsthis')
 def whatsthis():
   return render_template("what_is_this.html")
 
+
+# ======================= SCHOOL =======================
+@app.route('/school/')
+def schoolmain():
+  return render_template("/school/schoolindex.html")
+
+@app.route('/school/calc')
+def calc():
+  return render_template("/school/calculator.html")
+# ======================= SCHOOL =======================
+
+
 if __name__ == "__main__":
     from waitress import serve
     serve(app, host="0.0.0.0", port=8080)
+    print('goog')
 #app.run(host='0.0.0.0', port=8080) <-- old development flask thing
