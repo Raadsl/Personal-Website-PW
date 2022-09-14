@@ -3,6 +3,8 @@
 
 My personal website for the internet I guess
 
+Pretty proud because this is my first time using Flask render thingy's
+
 # Links
 > bg:  https://i.imgur.com/GgIyKKu.jpg
 
