@@ -4,6 +4,14 @@
     --card-background: #314d5eda;
 }
 
+div.visitcounter {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+}
+
+
 .bg {
     background-image: url("https://website.raadsel.repl.co/images/bg.jpg");
     background-size: cover;
