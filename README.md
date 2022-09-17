@@ -3,7 +3,7 @@
 
 My personal website for the internet I guess
 
-Pretty proud because this is my first time using Flask render thingy's
+Pretty proud because this is my first time using Flask render thingy's and Repl auth
 
 # Links
 > bg:  https://i.imgur.com/GgIyKKu.jpg
