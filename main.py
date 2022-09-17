@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import os
 print('tryna run')
 app = Flask('app')
@@ -13,7 +13,13 @@ def about():
 
 @app.route('/contact')
 def contact():
-  return render_template("contact.html")
+  print(request.headers)
+  return render_template(
+        'contact.html',
+        user_id=request.headers['X-Replit-User-Id'],
+        user_name=request.headers['X-Replit-User-Name'],
+        user_roles=request.headers['X-Replit-User-Roles']
+    )
 
 @app.route('/succes')
 def succes():
