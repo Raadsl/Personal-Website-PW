@@ -37,6 +37,10 @@ def schoolmain():
 @app.route('/school/calc')
 def calc():
   return render_template("/school/calculator.html")
+
+@app.route('/school/chat')
+def schoolchat():
+  return render_template("/school/chat.html")
 # ======================= SCHOOL =======================
   
 # ======================= ERRORS =======================
@@ -60,7 +64,8 @@ def foureighteen():
 # ======================= ERRORS =======================
 
 if __name__ == "__main__":
+    print('goog. Server is online')
     from waitress import serve
     serve(app, host="0.0.0.0", port=8080)
-    print('goog')
+
 #app.run(host='0.0.0.0', port=8080) <-- old development flask thing

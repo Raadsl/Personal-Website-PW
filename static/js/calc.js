@@ -4,7 +4,7 @@ var buttons = document.getElementsByClassName("button");
   Array.prototype.forEach.call(buttons, function(button) {
   button.addEventListener("click", function() {
     if (button.textContent != "=" && 
-    button.textContent != "69" && 
+    button.textContent != "sus" && 
     button.textContent != "C" && 
     button.textContent != "x" && 
     button.textContent != "÷" && 
@@ -27,7 +27,7 @@ var buttons = document.getElementsByClassName("button");
       display.value += button.textContent;
     } else if (button.textContent === "=") {
       equals();
-    } else if (button.textContent === "69") {
+    } else if (button.textContent === "sus") {
       noine();
     } else if (button.textContent === "C") {
       clear();
@@ -96,7 +96,7 @@ function clear() {
 }
 
 function noine() {
-  display.value = "69";
+  display.value += "69";
 }
 
 function backspace() {
