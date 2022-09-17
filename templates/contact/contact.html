@@ -51,11 +51,11 @@
      </div>
     <script>
        console.log('Contact page script succesfully loaded!')
-        if ([7141650].includes({{user_id}})) {  //<-- ban thing I guess
+        /*if ([7141650].includes({{user_id}})) {  //<-- ban thing I guess
           alert('You have been banned from contacting me this way!')
           window.open('/', "_self")
-          
         }
+        */
        async function sendContact(ev) {
         ev.preventDefault();
 
@@ -88,10 +88,11 @@
         });
 
         if (response.ok) {
-          alert('I have received your message! Please remember to don\'t spam messages. It is annoying and I will just block you.');
-          window.open('/succes', '_self')
+          alert('I have received your message! Please remember to don\'t spam messages. It is annoying and I will just ban your IP or your userID.');
+          window.open('/contact/succes', '_self')
         } else {
           alert('There was an error! Try again later!');
+          window.open('/contact/fail', '_self')
         }
       }
     </script>

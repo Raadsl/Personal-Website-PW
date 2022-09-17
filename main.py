@@ -11,19 +11,26 @@ def index():
 def about():
   return render_template("about.html")
 
+# ======================= CONTACT =======================
 @app.route('/contact')
 def contact():
   print(request.headers)
   return render_template(
-        'contact.html',
+        '/contact/contact.html',
         user_id=request.headers['X-Replit-User-Id'],
         user_name=request.headers['X-Replit-User-Name'],
         user_roles=request.headers['X-Replit-User-Roles']
     )
 
-@app.route('/succes')
+@app.route('/contact/succes')
 def succes():
-  return render_template("succes.html")
+  return render_template("/contact/succes.html")
+
+@app.route('/contact/fail')
+def fail():
+  return render_template("/contact/failed.html")
+
+# ======================= CONTACT =======================
 
 
 @app.route('/projects')
