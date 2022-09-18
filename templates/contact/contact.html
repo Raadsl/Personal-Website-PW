@@ -88,7 +88,7 @@
         });
 
         if (response.ok) {
-          alert('I have received your message! Please remember to don\'t spam messages. It is annoying and I will just ban your IP or your userID.');
+          alert('I have received your message! Please remember to don\'t spam messages. It is annoying and I will just ban your IP or your userID.'); /* After some time I decided to not log the IP and just use repl auth */
           window.open('/contact/succes', '_self')
         } else {
           alert('There was an error! Try again later!');
@@ -110,14 +110,23 @@
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
         <title>Raadsel | Contact - Login</title>
     </head>
+      <style>
+        .red {
+          background-color: #EC4431;
+        }
+        .red:hover {
+          background-color: #F19085;
+      </style>
     <body class="bg">
         <div class="card">
             <img src="https://i.imgur.com/wC8SnIV.png" style="border-radius: 20%">
-            <h1 style="color: #7aa2f7;"><span title="General kenobi..">Please authenticate!</span></h1>
+            <h1 style="color: #7aa2f7;"><span title="If you don't have Replit you will have to make a replit account. Or you can't message me. ">Please authenticate!</span></h1>
             <p>	Before sending a message, please authenticate via Replit.
-Authenticating via Replit is required to avoid spam.</p>
+Authenticating via Replit is required to avoid spam.<br></p>
           
-          		<button class='button' onclick="LoginWithReplit()"> Login </button>
+          		<button class='button' onclick="LoginWithReplit()"> Login </button> | 
+          <button class='button red' onclick=window.open('/about', '_self')>Back</button>
+              
           
 
         </div>
