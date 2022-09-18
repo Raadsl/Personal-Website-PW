@@ -14,17 +14,19 @@ def about():
 # ======================= CONTACT =======================
 @app.route('/contact')
 def contact():
-  print(request.headers)
   return render_template(
         '/contact/contact.html',
         user_id=request.headers['X-Replit-User-Id'],
-        user_name=request.headers['X-Replit-User-Name'],
-        user_roles=request.headers['X-Replit-User-Roles']
+        user_name=request.headers['X-Replit-User-Name']
     )
 
 @app.route('/contact/succes')
 def succes():
-  return render_template("/contact/succes.html")
+  return render_template(
+        '/contact/succes.html',
+        user_id=request.headers['X-Replit-User-Id'],
+        user_name=request.headers['X-Replit-User-Name']
+    )
 
 @app.route('/contact/fail')
 def fail():
