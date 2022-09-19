@@ -61,7 +61,7 @@ drone.on('error', error => {
 
 function getRandomName() {
   const person = prompt("Voer hier je naam in: ", "Roger")
-  if (person == null) {
+  if (person === '') {
   const adjs = ["herfst", "verborgen", "bitter", "mistig", "stil", "leeg", "droog", "donker", "zomer", "ijzig", "delicaat", "stil", "wit", "koel", "lente", "winter", "geduldig", "twilight", "dawn", "crimson", "wispy", "weathered", "blue", "billowing", "broken", "cold", "damp", "falling", "frosty", "green", "long", "late", "lingering", "moedig", "klein", "ochtend", "modderig", "oud", "rood", "ruwe", "stille", "klein", "sprankelend", "kloppend", "verlegen", "zwervende", "verdord", "wild", "zwart", "jonge", "heilig", "eenzaam", "geurig", "oud", "besneeuwde", "trotse", "bloemig", "rusteloos", "goddelijk", "gepolijst", "oud", "paars", "levendig", "naamloos"];
   const nouns = ["waterval", "rivier", "bries", "maan", "regen", "wind", "zee", "ochtend", "sneeuw", "meer", "zonsondergang", "den", "schaduw", "blad", "dageraad", "glitter", "woud", "heuvel", "wolk", "weide", "zon", "gazon", "vogel", "beek", "vlinder", "struik", "dauw", "stof", "veld", "vuur", "bloem", "vuurvlieg", "veer", "gras", "waas", "berg", "nacht", "vijver", "duisternis", "sneeuwvlok", "stilte", "geluid", "hemel", "vorm", "branding", "donder", "violet", "water", "wilde bloem", "golf", "water", "resonantie", "zon", "hout", "droom", "kers", "boom", "mist", "vorst", "stem", "papier", "kikker", "rook", "ster"];
   console.log('gebruiker zonder naam is gejoined')
@@ -71,6 +71,16 @@ function getRandomName() {
     nouns[Math.floor(Math.random() * nouns.length)]
   );
 
+  }
+  if (person.toLowerCase() == 'jorik') {
+    console.log('Jorik is gejoined (check of ie echt is)')
+    w8woord = prompt('Hallo Raadsel, wat is het wachtwoord?', 'wachtwoord hier')
+    if (w8woord.toLowerCase() == 'bababooey') {
+      return person
+    }
+    else {
+      return 'NEPPE NERD LLLL'
+    }
   }
   if (person.toLowerCase() == 'raadsel') {
     console.log('Raadsel is gejoined (check of ie echt is)')
@@ -123,6 +133,7 @@ function sendMessage() {
   if (value === '') {
     return;
   }
+  //hier
   DOM.input.value = '';
   drone.publish({
     room: 'observable-room',
