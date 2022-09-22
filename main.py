@@ -12,8 +12,6 @@ def about():
   return render_template("about.html")
 
 # ======================= CONTACT =======================
-
-  
 @app.route('/contact')
 def contact():
   return render_template(
@@ -33,7 +31,6 @@ def succes():
 @app.route('/contact/fail')
 def fail():
   return render_template("/contact/failed.html")
-
 # ======================= CONTACT =======================
 
 
