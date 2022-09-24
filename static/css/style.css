@@ -1,24 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
-
 :root {
     --card-background: #314d5eda;
 }
 
-div.visitcounter {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 120px;
-}
 
 
 .bg {
     background-image: url("https://5895b253-7316-4557-b4fb-f3a24165a4ae.id.repl.co/static/assets/bg.jpg");
     background-size: cover;
     background-position: top;
-
-    text-align: center;
     color: #c0caf5;
+    text-align: center;
     font-family: "JetBrains Mono", monospace;
 }
 
@@ -60,6 +52,15 @@ div.visitcounter {
 
 .il {
     text-align: center;
+}
+
+/* get the visitcounter  bottom right*/
+
+div.visitcounter {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 120px;
 }
 
 a {
