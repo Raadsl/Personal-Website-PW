@@ -13,12 +13,40 @@
         <meta property="og:description" content="The personal website of Raadsel!"> 
         <meta name="theme-color" content="#0079F2"> 
         <meta name="description" content="The personal website of Raadsel!">
+
     </head>
 <noscript><h2>Javascript is disabled in your browser.</h2></noscript>
-      
+    <!--Time script-->
+<body>
+   
+<div id="timething">
+    <img src="{{ url_for('static', filename='assets/Empty.png') }}" title='This changes with your time!' id='img' alt="time image" />
+</div>
+
+</body>
+
+<script type="text/javascript"> 
+var currentTime = new Date().getHours();
+console.log('Current time in hours: '+currentTime)
+if (true) {
+    console.log('time script activated')
+    if (7 <= currentTime && currentTime < 20) {
+        console.log('Day')
+        var image = document.getElementById('img')
+        image.src = "/static/assets/sun.png";
+    }
+    else {
+        console.log('evening/night')
+        var image = document.getElementById('img')
+        image.src = "/static/assets/moon.png";
+    }
+}
+</script>
+  <!--Time script-->
+  
     <body class="bg">
         <div class="card">
-            <img src="https://i.imgur.com/wC8SnIV.png" style="border-radius: 20%">
+            <img src="https://i.imgur.com/wC8SnIV.png" style="border-radius: 20%" alt='Raadsels profile picture!'>
             <h1 style="color: #7aa2f7;"><span title="General kenobi..">Hello There!</span></h1>
             <p>I like doing random coding stuff with NodeJS & Python, and I like dogs.</p>
           <label for="favcolor">My favorite color is Perano</label>
@@ -46,6 +74,7 @@
 <script type="text/javascript" src="https://www.counters-free.net/count/bchd"></script><br>
  <a href='http://www.counter-zaehler.de'>counter skript</a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=ee79d44197905bffb70e446da81704ff3c92b751'></script>
         </body>
+      </body>
     </div>
 </html>
 <!--Made by Raadsel. View LICENSE-->

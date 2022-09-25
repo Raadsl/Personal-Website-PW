@@ -63,6 +63,20 @@ div.visitcounter {
   width: 120px;
 }
 
+/* get sun/moon top-left corner*/
+#timething {
+  position: relative;
+}
+#timething img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+#timething:hover {
+  cursor: not-allowed;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 a {
     text-decoration: none;
     color: #7dcfff;
@@ -108,3 +122,4 @@ button:hover{
   background-color: #7aa2f7;
   color: black;
 }
+

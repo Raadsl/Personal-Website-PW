@@ -21,6 +21,8 @@ def projects():
 @app.route('/whatsthis')
 def whatsthis():
   return render_template("what_is_this.html")
+
+
   
 # ======================= CONTACT =======================
   
