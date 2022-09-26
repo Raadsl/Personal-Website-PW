@@ -20,16 +20,32 @@
 <body>
    
 <div id="timething">
-    <img src="{{ url_for('static', filename='assets/Empty.png') }}" title='This changes with your time!' id='img' alt="time image" />
+    <img src="{{ url_for('static', filename='assets/Empty.png') }}" title="This changes with your time!
+Fun fact: If you press this the domain will change but the website won't!" id='img' alt="time image" onclick='window.open(randomlink(), "_self")'/>
 </div>
 
 </body>
 
 <script type="text/javascript"> 
+if(window.location.href === 'https://raadsel.is-a-good.dev/') {arr = ['https://raadsel.is-a.dev', 'https://raadsel.is-not-a.dev']
+  console.log('is-a-good.dev')} 
+  
+if(window.location.href === 'https://raadsel.is-a.dev/') {
+  arr = ['https://raadsel.is-a-good.dev', 'https://raadsel.is-not-a.dev']
+  console.log('is-a.dev')} 
+  
+if(window.location.href === 'https://raadsel.is-not-a.dev/') {arr = ['https://raadsel.is-a.dev', 'https://raadsel.is-a-good.dev/']
+  console.log('is-not-a.dev')} 
+  
+//else {arr = ['raadsel.is-a.dev', 'raadsel.is-not-a.dev', 'raadsel.is-a-good.dev']}
+  
+function randomlink() {
+    return arr[Math.floor(arr.length * Math.random())];
+}
 var currentTime = new Date().getHours();
 console.log('Current time in hours: '+currentTime)
 if (true) {
-    console.log('time script activated')
+    
     if (7 <= currentTime && currentTime < 20) {
         console.log('Day')
         var image = document.getElementById('img')
@@ -41,6 +57,7 @@ if (true) {
         image.src = "/static/assets/moon.png";
     }
 }
+
 </script>
   <!--Time script-->
   

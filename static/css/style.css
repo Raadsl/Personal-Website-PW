@@ -73,8 +73,7 @@ div.visitcounter {
   right: 0px;
 }
 #timething:hover {
-  cursor: not-allowed;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
 }
 
 a {
