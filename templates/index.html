@@ -36,12 +36,12 @@ if(window.location.href === 'https://raadsel.is-a.dev/') {
   
 if(window.location.href === 'https://raadsel.is-not-a.dev/') {arr = ['https://raadsel.is-a.dev', 'https://raadsel.is-a-good.dev/']
   console.log('is-not-a.dev')} 
-  
 //else {arr = ['raadsel.is-a.dev', 'raadsel.is-not-a.dev', 'raadsel.is-a-good.dev']}
   
 function randomlink() {
     return arr[Math.floor(arr.length * Math.random())];
 }
+
 var currentTime = new Date().getHours();
 console.log('Current time in hours: '+currentTime)
 if (true) {
@@ -63,7 +63,7 @@ if (true) {
   
     <body class="bg">
         <div class="card">
-            <img src="https://i.imgur.com/wC8SnIV.png" style="border-radius: 20%" alt='Raadsels profile picture!'>
+            <img class='pointmouse' title='CLICK ME!!!!' onclick='window.open(randomlink(), "_self")'src="https://i.imgur.com/wC8SnIV.png" style="border-radius: 20%" alt='Raadsels profile picture!'>
             <h1 style="color: #7aa2f7;"><span title="General kenobi..">Hello There!</span></h1>
             <p>I like doing random coding stuff with NodeJS & Python, and I like dogs.</p>
           <label for="favcolor">My favorite color is Perano</label>

@@ -76,6 +76,12 @@ div.visitcounter {
   cursor: pointer;
 }
 
+.pointmouse {transition: 0.4s;}
+.pointmouse:hover {
+  cursor: pointer;
+  filter: blur(1.3px);
+}
+
 a {
     text-decoration: none;
     color: #7dcfff;
