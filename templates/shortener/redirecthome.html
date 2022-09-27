@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+  <title>Raadsel | URL Shortener!</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+        <meta property="og:title" content="Raadsel's website!"> 
+        <meta property="og:image" content="https://i.imgur.com/wC8SnIV.png"> 
+        <meta property="og:description" content="The URL shortener service from Raadsel!"> 
+        <meta name="theme-color" content="#0079F2"> 
+        <meta name="description" content="The URL shortener service from Raadsel!">
+
+
+
+  
+  <!--<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+  <script src='https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+ 
+
+
+
+
+<script>
+function setStorage(name, value) {
+  try {
+    localStorage.setItem(name, value);
+  }
+  catch (err) {
+    alert(e);
+  }
+}
+
+function getStorage(name) {
+  return (localStorage.getItem(name));
+}
+
+
+function copyText() {
+
+  /* Select text area by id*/
+  var Text = document.getElementById("sUrl");
+
+  /* Select the text inside text area. */
+  //Text.select();
+
+  /* Copy selected text into clipboard */
+  navigator.clipboard.writeText(Text.value);
+
+  /* Set the copied text as text for 
+  div with id clipboard */
+  document.getElementById("clipboard")
+      .innerHTML = Text.value;
+}
+  
+function saveURL(data) {
+  var prev_data = getStorage("lists");
+  if (data !== "") {
+    if (prev_data !== null) {
+      setStorage("lists", prev_data + "<hr>" + data);
+    }
+    else {
+      setStorage("lists", data);
+    }
+  }
+}
+        
+
+
+let short = async() => {
+  console.log('Shortening...')
+  var url = document.getElementById("urlBox").value;
+  console.log("Url: "+url)
+  try {
+    var data = await fetch("/create?url="+url)
+    data = await data.json();
+    
+    var sUrl = `${data.short_url}`;
+    var sUrlId = `${data.short_url_id}`;
+    var created = `${data.created}`;
+    
+    if(created === "true") {
+      document.getElementById('sUrl').innerHTML = `Shortened Url: <a href="${sUrl}" target="_blank">${sUrl}</a>`;
+      document.getElementById('sUrlId').innerHTML = `Shortened Url ID: <code>${sUrlId}</code>`;
+      
+      var data = `Long URL: <a href="${data.long_url}" target="_blank">${data.long_url}</a><br>Shortened Url: <a href="${sUrl}" target="_blank">${sUrl}</a><br>Shortened Url ID: <code>${sUrlId}</code>`
+      saveURL(data);
+    }
+    else {
+      document.getElementById('sUrlId').innerHTML = `Invalid Url!`;
+    }
+  }
+  catch(err) {
+    document.getElementById('sUrlId').innerHTML = `Something Went Wrong!`;
+    document.getElementById('sUrl').innerHTML = `<code>${err}</code>`;
+  }
+
+}
+
+</script>
+</head>
+
+ <body class="bg">
+        <div class="content">
+            <center><h1 style="color: #7aa2f7;">URL Shortener</h1></center>
+          <br>
+          <center>
+          <input type="url" class="form-label" id="urlBox" placeholder="Long url here: (eg: http://www.reallylong.link/rll/4BM0N9_uHCs3o6NxUTdU/nI3S_K59SxsNvy7"><br>
+          
+        <button class="button" style="cursor: pointer;" onclick="short();">Shorten URL</button>
+        <button onclick='window.open("/r/dash", "_self")' class='button' id='copycat'>Your URLs</button>
+          </center>
+        <br>
+        <h2 class="card-title" style="text-align: center;">Shortened URL</h2>
+        <hr>
+        <span id="sUrlId"></span><br>
+        <span id="sUrl"></span><br>
+        
+      </div>
+    
+    </body>

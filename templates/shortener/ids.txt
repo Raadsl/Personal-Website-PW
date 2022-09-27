@@ -1,0 +1,1 @@
+"c-f06": "https://www.curseforge.com/minecraft/bukkit-plugins/simple-prefix"
