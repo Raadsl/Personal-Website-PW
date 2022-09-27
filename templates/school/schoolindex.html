@@ -18,9 +18,66 @@
       
     </head>
 <noscript><h2>Javascript is disabled in your browser.</h2></noscript>
+<body>
+<div id="timething">
+    <img src="{{ url_for('static', filename='assets/Empty.png') }}" title="This changes with your time!
+Fun fact: If you press this the domain will change but the website won't!" id='img' alt="time image" onclick='window.open(randomlink(), "_self")'/>
+</div>
+
+</body>
+
+<script type="text/javascript"> 
+
+//else {arr = ['raadsel.is-a.dev', 'raadsel.is-not-a.dev', 'raadsel.is-a-good.dev']}
+  
+function randomlink() {
+    if(window.location.href === 'https://raadsel.is-a-good.dev/school/') {
+    arr = ['https://raadsel.is-a.dev/school/', 'https://raadsel.is-not-a.dev/school/']
+    console.log('is-a-good.dev/school/')
+    return arr[Math.floor(arr.length * Math.random())];
+    } 
+    
+    if(window.location.href === 'https://raadsel.is-a.dev/school/') {
+    arr = ['https://raadsel.is-a-good.dev/school/', 'https://raadsel.is-not-a.dev/school/']
+    console.log('is-a.dev/school/')
+    return arr[Math.floor(arr.length * Math.random())];
+    } 
+    
+    if(window.location.href === 'https://raadsel.is-not-a.dev/school/') {
+    arr = ['https://raadsel.is-a.dev/school/', 'https://raadsel.is-a-good.dev/school/']
+    console.log('is-not-a.dev/school/')
+    return arr[Math.floor(arr.length * Math.random())];
+    } 
+    else {
+      arr = ['https://raadsel.is-a.dev/school/', 'https://raadsel.is-a-good.dev/school/', 'https://raadsel.is-noy-a.dev/school/']
+      console.log('else')
+      return arr[Math.floor(arr.length * Math.random())];
+    }
+}
+
+var currentTime = new Date().getHours();
+console.log('Current time in hours: '+currentTime)
+if (true) {
+    
+    if (7 <= currentTime && currentTime < 20) {
+        console.log('Day')
+        var image = document.getElementById('img')
+        image.src = "/static/assets/sun.png";
+    }
+    else {
+        console.log('evening/night')
+        var image = document.getElementById('img')
+        image.src = "/static/assets/moon.png";
+    }
+}
+
+</script>
+  <!--Time script-->
+
+  
     <body class="bg">
         <div class="card">
-            <img src="https://i.imgur.com/wC8SnIV.png" style="border-radius: 20%">
+            <img src="https://i.imgur.com/wC8SnIV.png" style="border-radius: 20%" alt="Raadsels profile picture" class='pointmouse' title='CLICK ME!!!!' onclick='window.open(randomlink(), "_self")'>
             <h1 style="color: #7aa2f7;"><span title="Generaal Kenobi.. (heel slecht want het is een Nederlandse zin dus klopt ie echt niet... ik weet het D: )">Hallo daar!</span></h1>
             <p>Dit is het school portaal met alle links enzo.</p>
 
@@ -41,6 +98,7 @@
             </ul>
         </div>
     </body>
+  </body>
 </html>
 <html lang='en'>
   <body class="visitcounter">

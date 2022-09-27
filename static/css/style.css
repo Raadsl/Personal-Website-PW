@@ -68,11 +68,13 @@ div.visitcounter {
   position: relative;
   transition: 0.4s;
 }
+
 #timething img {
   position: absolute;
   top: 0px;
   right: 0px;
 }
+
 #timething:hover {
   cursor: pointer;
   filter: blur(1.8px);
