@@ -131,6 +131,7 @@ def dashboard():
 def urlshortredirect(id):
     return redirect(getID(id))
 
+
 @app.route("/create")
 @limiter.limit("5/second")
 def createurl():
@@ -141,7 +142,7 @@ def createurl():
         saveIDS(id, url)
         data = {
             "created": "true",
-            "short_url": f"https://raadsel.is-a.dev/r/{id}",
+            "short_url": f"https://rdsl.ga/r/{id}",
             "short_url_id": id,
             "long_url": f"{url}"
         }
@@ -154,7 +155,7 @@ def createurl():
             "long_url": ""
         }
         return jsonify(data)
-  
+# some code from Ifreaku | replit.com/@shoty
 # ======================= ERRORS =======================
   
 @app.errorhandler(404)

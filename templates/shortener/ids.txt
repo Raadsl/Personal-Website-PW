@@ -1,1 +1,8 @@
+"5A9C-": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_input_test",
+"e1fA9": "https://urlex.org",
+"-F---": "https://urlex.org",
+"B4D07": "https://jorik.loos.ws",
+"c7aB5": "http://www.loos.ws",
+"3-935": "www.loos.ws",
+"4b12c": "http://www.loos.ws",
 "c-f06": "https://www.curseforge.com/minecraft/bukkit-plugins/simple-prefix"
