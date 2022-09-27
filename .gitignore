@@ -5,3 +5,4 @@
 .dccache
 ngrok
 .DS_Store
+templates/shortener/ids.txt
