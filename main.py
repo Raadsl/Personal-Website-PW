@@ -142,7 +142,7 @@ def createurl():
     url = str(request.args.get("url"))
     if url != "None" and url != "" and url != " ":
         id = genID()
-        print(id)
+        
         saveIDS(id, url)
         data = {
             "created": "true",
@@ -169,7 +169,7 @@ def createlongurl():
     url = str(request.args.get("url"))
     if url != "None" and url != "" and url != " ":
         id = genID()
-        print(id)
+        
         saveIDS(id, url)
         data = {
             "created": "true",
