@@ -129,8 +129,12 @@ def dashboard():
   
 @app.route("/r/<id>")
 def urlshortredirect(id):
+  try:
     return redirect(getID(id))
-
+  except:
+    return render_template(
+      '/errors/shortenernotfound.html',
+      idthing='shortened')
 
 @app.route("/create")
 @limiter.limit("5/second")
@@ -156,6 +160,47 @@ def createurl():
         }
         return jsonify(data)
 # some code from Ifreaku | replit.com/@shoty
+
+# ======================= LENGTHENER =======================   
+
+@app.route("/longcreate")
+@limiter.limit("5/second")
+def createlongurl():
+    url = str(request.args.get("url"))
+    if url != "None" and url != "" and url != " ":
+        id = genID()
+        print(id)
+        saveIDS(id, url)
+        data = {
+            "created": "true",
+            "longed_url": f"https://rdsl.ga/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthing/{id}",
+            "longed_url_id": id,
+            "short_url": f"{url}"
+        }
+        return jsonify(data)
+    else:
+        data = {
+            "created": "false",
+            "longed_url": "",
+            "longed_url_id": "",
+            "short_url": ""
+        }
+        return jsonify(data)
+
+@app.route('/lengthener')
+def urllengthener():
+  return render_template('/shortener/lengthener.html')
+
+
+@app.route("/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingalsourcoolbtw/<id>")
+def urllongredirect(id):
+  try:
+    return redirect(getID(id))
+  except:
+    return render_template(
+      '/errors/shortenernotfound.html',
+      idthing='lengthened')
+      
 # ======================= ERRORS =======================
   
 @app.errorhandler(404)

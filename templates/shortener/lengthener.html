@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
-  <title>Raadsel | URL Shortener!</title>
+  <title>Raadsel | URL lengthener!</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
         <meta property="og:title" content="Raadsel's website!"> 
         <meta property="og:image" content="https://i.imgur.com/wC8SnIV.png"> 
-        <meta property="og:description" content="The URL shortener service from Raadsel!"> 
+        <meta property="og:description" content="The URL lengthener service from Raadsel!"> 
         <meta name="theme-color" content="#0079F2"> 
-        <meta name="description" content="The URL shortener service from Raadsel!">
+        <meta name="description" content="The URL lengthener service from Raadsel!">
 
 
 
@@ -29,6 +29,7 @@
 
 
 <script>
+
 function setStorage(name, value) {
   try {
     localStorage.setItem(name, value);
@@ -55,27 +56,28 @@ function saveURL(data) {
     }
   }
 }
-        
+
+  
 
 
-let short = async() => {
-  console.log('Shortening...')
+let long = async() => {
+  console.log('longening...')
   var url = document.getElementById("urlBox").value;
   console.log("Url: "+url)
   try {
-    var data = await fetch("/create?url="+url)
+    var data = await fetch("/longcreate?url="+url)
     data = await data.json();
     
-    var sUrl = `${data.short_url}`;
-    var sUrlId = `${data.short_url_id}`;
+    var sUrl = `${data.longed_url}`;
+    var sUrlId = `${data.longed_url_id}`;
     var created = `${data.created}`;
     
     if(created === "true") {
-      document.getElementById('sUrl').innerHTML = `Shortened Url: <a href="${sUrl}" target="_blank">${sUrl}</a>`;
-      document.getElementById('sUrlId').innerHTML = `Shortened URL copied to clipboard!<br>Shortened Url ID: <code>${sUrlId}</code>`;
+      document.getElementById('sUrl').innerHTML = `lengthened Url: <a href="${sUrl}" target="_blank">Copied URL to clipboard because it is too big for this page</a>`;
+      document.getElementById('sUrlId').innerHTML = `Lengthened Url ID: <code>${sUrlId}</code>`;
       
-      var data = `Long URL: <a href="${data.long_url}" target="_blank">${data.long_url}</a><br>Shortened Url: <a href="${sUrl}" target="_blank">${sUrl}</a><br>Shortened Url ID: <code>${sUrlId}</code>`
-      saveURL(data);
+      var data = `short URL: <a href="${data.short_url}" target="_blank">${data.long_url}</a><br>Lengthened Url: <a href="${sUrl}" target="_blank">Too big to show</a><br>Lengthened Url ID: <code>${sUrlId}</code>`
+      saveURL(data);;
       navigator.clipboard.writeText(sUrl)
     }
     else {
@@ -90,33 +92,33 @@ let short = async() => {
 }
 
 </script>
-    <style>
+<style>
         .red {
           background-color: #EC4431;
         }
         .red:hover {
           background-color: #F19085;
-      </style>
+</style>
 </head>
 
  <body class="bg">
         <div class="content">
-            <center><h1 style="color: #7aa2f7;">URL Shortener</h1></center>
+            <center><h1 style="color: #7aa2f7;">URL Lengthener</h1></center>
           <br>
           <center>
-          <input type="url" size="50" class="form-label" id="urlBox" placeholder="Long url here: (eg: https://longurlmaker.com/go?id=lengthenedDecentURLShortenURLdeepstret"><br>
+          <input type="url" size="50" class="form-label" id="urlBox" placeholder="Short url here: (eg: https://nu.nl"><br>
           
-        <button class="button" style="cursor: pointer;" onclick="short();">Shorten URL</button> | <button onclick='window.open("/r/dash", "_self")' class='button red' id='copycat'>Your URLs</button>
+        <button class="button red" style="cursor: pointer;" onclick="long();">Lengthen URL</button> | <button onclick='window.open("/r/dash", "_self")' class='button' id='copycat'>Your URLs</button>
           </center>
         <br>
-        <h2 class="card-title" style="text-align: center;">Shortened URL:</h2>
+        <h2 class="card-title" style="text-align: center;">Lengthened URL:</h2>
         <hr>
         <span id="sUrlId"></span><br>
         <span id="sUrl"></span><br>
         <br><br>
         <center>
-        <button onclick='window.open("/", "_self")' class='button red'>Home</button> | <button onclick='window.open("/lengthener", "_self")' class='button'>Lengthener</button>
-        <p>Some code <del>stolen</del> from <a href='https://replit.com/@shoty'>Ifreaku</a></p></center>
+        <button onclick='window.open("/", "_self")' class='button'>Home</button> | <button onclick='window.open("/r", "_self")' class='button red'>Shortener</button>
+        <p>Some code <del title='I wouldnt dare!!'>stolen</del> from <a href='https://replit.com/@shoty'>Ifreaku</a></p></center>
       </div>
     
     </body>

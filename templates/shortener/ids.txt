@@ -1,2 +1,7 @@
+"ae3e8": "nu.nl",
+"73aed": "nu.nl",
+"64b-4": "nu.nl",
+"25dB4": "https://nu.nl",
+"b5EE7": "h",
 "5A9C-": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_input_test",
 "c-f06": "https://www.curseforge.com/minecraft/bukkit-plugins/simple-prefix"
