@@ -146,7 +146,7 @@ def createurl():
         saveIDS(id, url)
         data = {
             "created": "true",
-            "short_url": f"https://rdsl.ga/r/{id}",
+            "short_url": f"https://raadsel.is-a.dev/r/{id}", #change later to rdsl.ga when it works
             "short_url_id": id,
             "long_url": f"{url}"
         }
@@ -173,7 +173,7 @@ def createlongurl():
         saveIDS(id, url)
         data = {
             "created": "true",
-            "longed_url": f"https://rdsl.ga/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingbruhyourweirdaf/D8458hf8Hd8h48hfeh/{id}",
+            "longed_url": f"https://raadsel.is-a.dev/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingbruhyourweirdaf/D8458hf8Hd8h48hfeh/{id}", #change later to rdsl.ga when it works
             "longed_url_id": id,
             "short_url": f"{url}"
         }
