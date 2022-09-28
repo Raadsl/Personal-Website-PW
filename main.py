@@ -18,7 +18,7 @@ limiter = Limiter(
     storage_uri="memory://",
 )
 
-
+# CNAME: https://5895b253-7316-4557-b4fb-f3a24165a4ae.id.repl.co
 # ======================= MAIN PAGES =======================
 
 @app.route('/')
@@ -173,7 +173,7 @@ def createlongurl():
         saveIDS(id, url)
         data = {
             "created": "true",
-            "longed_url": f"https://rdsl.ga/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthing/{id}",
+            "longed_url": f"https://rdsl.ga/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingbruhyourweirdaf/D8458hf8Hd8h48hfeh/{id}",
             "longed_url_id": id,
             "short_url": f"{url}"
         }
@@ -192,7 +192,7 @@ def urllengthener():
   return render_template('/shortener/lengthener.html')
 
 
-@app.route("/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingalsourcoolbtw/<id>")
+@app.route("/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingbruhyourweirdaf/D8458hf8Hd8h48hfeh/<id>")
 def urllongredirect(id):
   try:
     return redirect(getID(id))

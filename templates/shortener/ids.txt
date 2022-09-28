@@ -1,7 +1,6 @@
-"ae3e8": "nu.nl",
-"73aed": "nu.nl",
-"64b-4": "nu.nl",
-"25dB4": "https://nu.nl",
-"b5EE7": "h",
-"5A9C-": "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_input_test",
-"c-f06": "https://www.curseforge.com/minecraft/bukkit-plugins/simple-prefix"
+"AFAE9": "https://www.animaties.com/data/media/211/koe-bewegende-animatie-0289.gif",
+"f5ffC": "https://www.google.com/maps/place/Van Rossempad/@52.0058592,4.3337133,232m/data=!3m1!1e3!4m5!3m4!1s0x47c5b4355113318b:0xa4a4774353ac7c1e!8m2!3d52.0056942!4d4.3352627?hl=nl",
+"f4B38": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+"76-dF": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+"Dd2e4": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+"ae3e8": "https://nu.nl"
