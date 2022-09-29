@@ -100,13 +100,12 @@ def saveIDS(id, url):
     damta = f4.read()
     f4.close()
   
-    print(damta)
 
 def getID(id):
     f = open(os.getenv('path'), "r")
     data = '{' + f.read() + '}'
     idsList = json.loads(data)
-    print(str(idsList))
+
     f.close()
     url = f'{idsList[f"{id}"]}'
     return url
