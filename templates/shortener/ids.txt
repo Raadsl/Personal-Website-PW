@@ -1,3 +1,5 @@
+"b322-": "https://raadsel.is-a.dev/r",
+"97ba3": "https://github.com/Rob--W/cors-anywhere",
 "ec0d8": "bruh",
 "AFAE9": "https://www.animaties.com/data/media/211/koe-bewegende-animatie-0289.gif",
 "f5ffC": "https://www.google.com/maps/place/Van Rossempad/@52.0058592,4.3337133,232m/data=!3m1!1e3!4m5!3m4!1s0x47c5b4355113318b:0xa4a4774353ac7c1e!8m2!3d52.0056942!4d4.3352627?hl=nl",
