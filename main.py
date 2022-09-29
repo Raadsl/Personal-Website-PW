@@ -139,13 +139,22 @@ def urlshortredirect(id):
 @limiter.limit("5/second")
 def createurl():
     url = str(request.args.get("url"))
+    if url == "https://www.youtube.com/watch?v=dQw4w9WgXcQ":
+      id = 'R1Ck9I'
+      data = {
+          "created": "true",
+          "short_url": f"https://rdsl.ga/r/{id}", 
+          "short_url_id": id,
+          "long_url": f"{url}"
+      }
+      return jsonify(data)
     if url != "None" and url != "" and url != " ":
         id = genID()
         
         saveIDS(id, url)
         data = {
             "created": "true",
-            "short_url": f"https://rdsl.ga/r/{id}", #change later to rdsl.ga when it works
+            "short_url": f"https://rdsl.ga/r/{id}", 
             "short_url_id": id,
             "long_url": f"{url}"
         }
@@ -166,13 +175,22 @@ def createurl():
 @limiter.limit("5/second")
 def createlongurl():
     url = str(request.args.get("url"))
+    if url == "https://www.youtube.com/watch?v=dQw4w9WgXcQ":
+      id = 'R1Ck9I'
+      data = {
+          "created": "true",
+          "longed_url": f"https://5895b253-7316-4557-b4fb-f3a24165a4ae.id.repl.co/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingbruhyourweirdaf/D8458hf8Hd8h48hfeh/{id}", 
+          "longed_url_id": id,
+          "long_url": f"{url}"
+      }
+      return jsonify(data)
     if url != "None" and url != "" and url != " ":
         id = genID()
         
         saveIDS(id, url)
         data = {
             "created": "true",
-            "longed_url": f"https://5895b253-7316-4557-b4fb-f3a24165a4ae.id.repl.co/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingbruhyourweirdaf/D8458hf8Hd8h48hfeh/{id}", #change later to rdsl.ga when it works
+            "longed_url": f"https://5895b253-7316-4557-b4fb-f3a24165a4ae.id.repl.co/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingbruhyourweirdaf/D8458hf8Hd8h48hfeh/{id}", 
             "longed_url_id": id,
             "short_url": f"{url}"
         }

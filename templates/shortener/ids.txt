@@ -1,16 +1,11 @@
-"A44-9": "sww.nu.nl",
+"A44-9": "www.nu.nl",
 "4ab-E": "soep",
 "667-A": "https://imgflip.com/i/6v4yhg",
-"2A4c8": "https://nu.nl",
 "158c2": "https://replit.com/@Raadsel/Browser?v=1",
 "d25BD": "https://www.instagram.com/reel/CjDy6MMjxww/?igshid=YmMyMTA2M2Y=",
 "ed5C1": "https://jorik.loos.ws",
 "b322-": "https://raadsel.is-a.dev/r",
 "97ba3": "https://github.com/Rob--W/cors-anywhere",
-"ec0d8": "bruh",
 "AFAE9": "https://www.animaties.com/data/media/211/koe-bewegende-animatie-0289.gif",
 "f5ffC": "https://www.google.com/maps/place/Van Rossempad/@52.0058592,4.3337133,232m/data=!3m1!1e3!4m5!3m4!1s0x47c5b4355113318b:0xa4a4774353ac7c1e!8m2!3d52.0056942!4d4.3352627?hl=nl",
-"f4B38": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-"76-dF": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-"Dd2e4": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-"ae3e8": "https://nu.nl"
+"R1Ck9I": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
