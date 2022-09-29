@@ -1,3 +1,4 @@
+"ed5C1": "https://jorik.loos.ws",
 "b322-": "https://raadsel.is-a.dev/r",
 "97ba3": "https://github.com/Rob--W/cors-anywhere",
 "ec0d8": "bruh",
