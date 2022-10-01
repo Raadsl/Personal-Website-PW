@@ -110,21 +110,24 @@ def getID(id):
     url = f'{idsList[f"{id}"]}'
     return url
   
-app.config['JSON_SORT_KEYS'] = False
 
 @app.route('/redirect')
 def shortenerhome():
     return render_template("/shortener/redirecthome.html")
 
-@app.route('/r')
-def reditest():
-  return render_template("/shortener/redirecthome.html")
-  
-
-@app.route('/r/dash')
+@app.route('/redirect/dashboard')
 def dashboard():
   return render_template("/shortener/redirectdashboard.html")
-  
+
+@app.route('/r')
+def shortenerhomeSHORT():
+  return render_template("/shortener/redirecthome.html")
+
+@app.route('/r/dash')
+def dashboardSHORT():
+  return render_template("/shortener/redirectdashboard.html")
+
+
   
 @app.route("/r/<id>")
 def urlshortredirect(id):
@@ -167,7 +170,7 @@ def createurl():
             "long_url": ""
         }
         return jsonify(data)
-# some code from Ifreaku | replit.com/@shoty
+# some code from Ifreaku aka replit.com/@shoty
 
 # ======================= LENGTHENER =======================   
 
@@ -207,7 +210,6 @@ def createlongurl():
 @app.route('/lengthener')
 def urllengthener():
   return render_template('/shortener/lengthener.html')
-
 
 @app.route("/redirectingtoaverylongurl123456789jajaverycooltijmeniseenvalnerdsomethingsarejusttruejustasth1scoolreferrallinkurlthingbruhyourweirdaf/D8458hf8Hd8h48hfeh/<id>")
 def urllongredirect(id):
