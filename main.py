@@ -127,6 +127,9 @@ def shortenerhomeSHORT():
 def dashboardSHORT():
   return render_template("/shortener/redirectdashboard.html")
 
+@app.route('/r/qr')
+def QRcodegen():
+  return render_template("/shortener/qrcodemaker.html")
 
   
 @app.route("/r/<id>")
