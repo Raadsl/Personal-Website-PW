@@ -75,6 +75,18 @@ def calc():
 def schoolchat():
   return render_template("/school/chat.html")
 
+# ============================ CDN ============================
+
+@app.route('/cdn')
+def refertocdn1():
+  return redirect('https://i.rdsl.ga')
+
+@app.route('/i')
+def refertocdn2():
+  return redirect('https://i.rdsl.ga')
+
+
+  
 # ======================= URL SHORTENER =======================
 
 def genID():
