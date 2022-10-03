@@ -85,7 +85,12 @@ def refertocdn1():
 def refertocdn2():
   return redirect('https://i.rdsl.ga')
 
-
+@app.route("/i/<id>")
+def cdnreferspecifikimg(id):
+  try:
+    return redirect("https://i.rdsl.ga/i/"+id)
+  except:
+    return render_template('/errors/404.html')
   
 # ======================= URL SHORTENER =======================
 
