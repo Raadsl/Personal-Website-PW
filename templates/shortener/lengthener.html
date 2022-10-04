@@ -65,7 +65,7 @@ let long = async() => {
   var url = document.getElementById("urlBox").value;
   console.log("Url: "+url)
   try {
-    var data = await fetch("/longcreate?url="+url)
+    var data = await fetch("https://LankyElegantArray.raadsel.repl.co/longcreate?url="+url)
     data = await data.json();
     
     var sUrl = `${data.longed_url}`;
@@ -93,11 +93,11 @@ let long = async() => {
 
 </script>
 <style>
-        .red {
-          background-color: #EC4431;
-        }
-        .red:hover {
-          background-color: #F19085;
+.red {
+  background-color: #EC4431;
+}
+.red:hover {
+  background-color: #F19085;
 </style>
 </head>
 
