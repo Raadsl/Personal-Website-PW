@@ -63,7 +63,7 @@ let short = async() => {
   var url = document.getElementById("urlBox").value;
   console.log("Url: "+url)
   try {
-    var data = await fetch("https://LankyElegantArray.raadsel.repl.co/create?url="+url)
+    var data = await fetch("https://rdsl.ga/create?url="+url)
     data = await data.json();
     
     var sUrl = `${data.short_url}`;

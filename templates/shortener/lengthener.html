@@ -65,7 +65,7 @@ let long = async() => {
   var url = document.getElementById("urlBox").value;
   console.log("Url: "+url)
   try {
-    var data = await fetch("https://LankyElegantArray.raadsel.repl.co/longcreate?url="+url)
+    var data = await fetch("https://rdsl.ga/longcreate?url="+url)
     data = await data.json();
     
     var sUrl = `${data.longed_url}`;
