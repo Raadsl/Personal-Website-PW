@@ -62,6 +62,10 @@ def fail():
   return render_template("/contact/failed.html")
 
 # ======================= SCHOOL =======================
+
+@app.route('/robots.txt')
+def antirobotonschool():
+  return redirect("https://pastebin.com/raw/kJt7bLUg")
   
 @app.route('/school/')
 def schoolmain():
